@@ -20,7 +20,7 @@ description: "An overview of the Long movie from the Sakila database"
 
 # Long Movies Statistics
 
-Below, we calculate and visualize the movies length greater than 180  from the Sakila database.
+Below, we calculate and visualize the movies length greater than 180  from the Sakila database
 
 ```sql long_movies
     FROM film
@@ -140,12 +140,6 @@ Below, we calculate and visualize the actors with the most movies from the Sakil
     LIMIT 10
 ```
 
-    data={top_actor_counts}
-    title="Top actor counts"
-    x=actor_name
-    y=nr_movie_count
-/>
-
 <BarChart
     data={top_actor_counts}
     title="Top actor counts"
@@ -233,33 +227,6 @@ Below, we calculate and visualiz the countries with the most customers from the 
 />
 
 ---
-title: "Top customer by spend"
-description: "An overview of top customers based on their total expenditure from the Sakila database"
----
-
-# Top customer by spend Statistics
-
-Below, we calculate and visualize top customers based on their total expenditure from the Sakila database.
-
-```sql top_cust_total_spend
-    SELECT 
-        cu.customer_id,
-        cu.first_name || ' ' || cu.last_name AS customer_name,
-        SUM(p.amount) AS total_spend
-    
-    FROM customer cu
-    JOIN payment p ON cu.customer_id = p.customer_id
-    GROUP BY cu.customer_id, customer_name
-    ORDER BY total_spend DESC;
-    LIMIT 5
-```
-<BarChart
-    data={top_cust_total_spend}
-    title="Top customer by spend"
-    x=customer_name
-    y=total_spend
-/>
----
 title: "Top rented movies"
 description: "An overview of the movies with the highest number of rentals from the Sakila database"
 ---
@@ -279,6 +246,7 @@ Below, we calculate and visualize the movies with the highest number of rentals 
     ORDER BY rental_count DESC;
     LIMIT 10
 ```
+
 <BarChart
     data={ top_rented_movies}
     title="Top rented movies"
@@ -317,4 +285,32 @@ Below, we calculate and visualize  movie categories and their respective revenue
     y=total_revenue
 />
 
+---
+title: "Top customer by spend"
+description: "An overview of top customers based on their total expenditure from the Sakila database"
+---
+
+# Top customer by spend Statistics
+
+Below, we calculate and visualize top customers based on their total expenditure from the Sakila database.
+
+```sql top_cust_total_spend
+    SELECT 
+        cu.customer_id,
+        cu.first_name || ' ' || cu.last_name AS customer_name,
+        SUM(p.amount) AS total_spend
+    
+    FROM customer cu
+    JOIN payment p ON cu.customer_id = p.customer_id
+    GROUP BY cu.customer_id, customer_name
+    ORDER BY total_spend DESC;
+    LIMIT 5
+```
+
+<BarChart
+    data={top_cust_total_spend}
+    title="Top customer by spend"
+    x=customer_name
+    y=total_spend
+/>
 
