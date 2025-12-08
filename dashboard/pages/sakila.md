@@ -233,6 +233,33 @@ Below, we calculate and visualiz the countries with the most customers from the 
 />
 
 ---
+title: "Top customer by spend"
+description: "An overview of top customers based on their total expenditure from the Sakila database"
+---
+
+# Top customer by spend Statistics
+
+Below, we calculate and visualize top customers based on their total expenditure from the Sakila database.
+
+```sql top_cust_total_spend
+    SELECT 
+        cu.customer_id,
+        cu.first_name || ' ' || cu.last_name AS customer_name,
+        SUM(p.amount) AS total_spend
+    
+    FROM customer cu
+    JOIN payment p ON cu.customer_id = p.customer_id
+    GROUP BY cu.customer_id, customer_name
+    ORDER BY total_spend DESC;
+    LIMIT 5
+```
+<BarChart
+    data={top_cust_total_spend}
+    title="Top customer by spend"
+    x=customer_name
+    y=total_spend
+/>
+---
 title: "Top rented movies"
 description: "An overview of the movies with the highest number of rentals from the Sakila database"
 ---
@@ -290,31 +317,4 @@ Below, we calculate and visualize  movie categories and their respective revenue
     y=total_revenue
 />
 
----
-title: "Top customer by spend"
-description: "An overview of top customers based on their total expenditure from the Sakila database"
----
-
-# Top customer by spend Statistics
-
-Below, we calculate and visualize top customers based on their total expenditure from the Sakila database.
-
-```sql top_cust_total_spend
-    SELECT 
-        cu.customer_id,
-        cu.first_name || ' ' || cu.last_name AS customer_name,
-        SUM(p.amount) AS total_spend
-    
-    FROM customer cu
-    JOIN payment p ON cu.customer_id = p.customer_id
-    GROUP BY cu.customer_id, customer_name
-    ORDER BY total_spend DESC;
-    LIMIT 5
-```
-<BarChart
-    data={top_cust_total_spend}
-    title="Top customer by spend"
-    x=customer_name
-    y=total_spend
-/>
 
