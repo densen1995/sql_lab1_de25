@@ -28,7 +28,6 @@ Below, we calculate and visualize the movies length greater than 180  from the S
     WHERE length > 180 
     ORDER BY length DESC;
 ```
-
 <BarChart
     data={long_movies}
     title="Long movies"
@@ -86,7 +85,6 @@ SELECT
 FROM film
 
 ```
-
 <BarChart
     data={length_stat}
     title="Movie length statistics"
@@ -115,7 +113,6 @@ FROM film
     ORDER BY cost_per_day DESC
     LIMIT 10
 ```
-
 <BarChart
     data={most_exp_movies_per_day}
     title="Most expensive movies per day"
@@ -175,7 +172,6 @@ Below, we calculate and visualize the customers with the most movie rentals from
     ORDER BY rentals DESC;
     LIMIT 12
 ```
-
 <BarChart
     data={top_renters}
     title="Top renters"
@@ -199,7 +195,6 @@ Below, we calculate and visualize the movies with the highest replace cost from 
     ORDER BY replacement_cost DESC
     LIMIT 15
 ```
-
 <BarChart
     data={ highest_replace_cost}
     title="Highest replace cost"
@@ -230,7 +225,6 @@ Below, we calculate and visualiz the countries with the most customers from the 
     ORDER BY customer_count DESC
     LIMIT 5
 ```
-
 <BarChart
     data={ most_country_customer}
     title="Most country customers"
@@ -258,7 +252,6 @@ Below, we calculate and visualize the movies with the highest number of rentals 
     ORDER BY rental_count DESC;
     LIMIT 10
 ```
-
 <BarChart
     data={ top_rented_movies}
     title="Top rented movies"
@@ -318,8 +311,6 @@ Below, we calculate and visualize top customers based on their total expenditure
     ORDER BY total_spend DESC;
     LIMIT 5
 ```
-
-
 <BarChart
     data={top_cust_total_spend}
     title="Top customer by spend"
