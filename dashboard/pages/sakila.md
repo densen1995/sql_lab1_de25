@@ -12,12 +12,39 @@ title: Welcome to sakila database
 
 
 
+
+---
+title: "Sakila  Long  Movies Statistics"
+description: "An overview of the Long movie from the Sakila database"
+---
+
+# Long Movies Statistics
+
+Below, we calculate and visualize the movies length greater than 180  from the Sakila database.
+
 ```sql long_movies
     FROM film
     SELECT title, length
     WHERE length > 180 
     ORDER BY length DESC;
 ```
+
+<BarChart
+    data={long_movies}
+    title="Long movies"
+    x= title
+    y=length
+/>
+
+
+---
+title: "Sakila Love Statistics"
+description: "An overview of the love movie from the Sakila database"
+---
+
+# Movie with word "love" Statistics
+
+Below, we visualize the  movies with the word "love" from the Sakila database.
 
 ```sql love_movies
  FROM film
@@ -29,14 +56,53 @@ title: Welcome to sakila database
     ORDER BY title;
 ```
 
+
+
+---
+title: "Sakila Movie Length Statistics"
+description: "An overview of the movie length statistics from the Sakila database"
+---
+
+# Movie Length Statistics
+
+Below, we calculate and visualize the **shortest**, **average**, **median**, and **longest** movie lengths from the Sakila database.
+
 ```sql length_stat
-FROM film
+
     SELECT
-        MIN(length) AS shortest,
-        AVG(length) AS average,
-        MEDIAN(length) AS median,
-        MAX(length) as longest
+        'Shortest' AS label, MIN(length) AS value
+FROM film
+UNION
+SELECT
+        'Average' AS label, AVG(length) AS value
+FROM film
+UNION
+SELECT
+        'Median' AS label, MEDIAN(length) AS value
+FROM film
+UNION
+SELECT
+        'Longest' AS label, MAX(length) AS value
+FROM film
+
 ```
+
+<BarChart
+    data={length_stat}
+    title="Movie length statistics"
+    x= label
+    y=value
+/>
+
+
+---
+title: "Sakila Most expensive movies per day Statistics"
+description: "An overview of the Most expensive movies rental per day from the Sakila database"
+---
+
+# Most expensive movies per day Statistics
+
+Below, we calculate and visualize the most expensive movies per day from the Sakila database.
 
 ```sql most_exp_movies_per_day
 FROM film
@@ -49,6 +115,24 @@ FROM film
     ORDER BY cost_per_day DESC
     LIMIT 10
 ```
+
+<BarChart
+    data={most_exp_movies_per_day}
+    title="Most expensive movies per day"
+    x=title
+    y=cost_per_day
+/>
+
+
+---
+title: "Sakila Top actor counts Statistics"
+description: "An overview of the  actors with the most movies from the Sakila database"
+---
+
+# Top actor counts Statistics
+
+Below, we calculate and visualize the actors with the most movies from the Sakila database.
+
 ```sql top_actor_counts
     SELECT a.actor_id, a.first_name || ' ' || a.last_name AS actor_name, 
     COUNT(fa.film_id) AS nr_movie_count
@@ -58,6 +142,30 @@ FROM film
     ORDER BY nr_movie_count DESC 
     LIMIT 10
 ```
+
+    data={top_actor_counts}
+    title="Top actor counts"
+    x=actor_name
+    y=nr_movie_count
+/>
+
+<BarChart
+    data={top_actor_counts}
+    title="Top actor counts"
+    x=actor_name
+    y=nr_movie_count
+/>
+
+
+---
+title: "Sakila Top renters Statistics"
+description: "An overview of the  customers with the most movie rentals from the Sakila database"
+---
+
+# Top renters Statistics
+
+Below, we calculate and visualize the customers with the most movie rentals from the Sakila database.
+
 ```sql top_renters
     SELECT c.customer_id, c.first_name || ' ' || c.last_name AS customer_name, 
     COUNT(r.rental_id) AS rentals
@@ -68,12 +176,47 @@ FROM film
     LIMIT 12
 ```
 
+<BarChart
+    data={top_renters}
+    title="Top renters"
+    x=customer_name
+    y=rentals
+/>
+
+
+---
+title: "Highest replace cost"
+description: "An overview of the movies with the highest replace cost from the Sakila database"
+---
+
+# Highest replace cost Statistics
+
+Below, we calculate and visualize the movies with the highest replace cost from the Sakila database.
+
 ```sql highest_replace_cost
     FROM film 
     SELECT title, replacement_cost
     ORDER BY replacement_cost DESC
     LIMIT 15
 ```
+
+<BarChart
+    data={ highest_replace_cost}
+    title="Highest replace cost"
+    x=title
+    y=replacement_cost
+/>
+
+
+
+---
+title: "Most country customers"
+description: "An overview of the countries with the most customers from the Sakila database"
+---
+
+# Most country customers Statistics
+
+Below, we calculate and visualiz the countries with the most customers from the Sakila database.
 
 ```sql most_country_customer
     SELECT 
@@ -88,6 +231,22 @@ FROM film
     LIMIT 5
 ```
 
+<BarChart
+    data={ most_country_customer}
+    title="Most country customers"
+    x=country
+    y=customer_count
+/>
+
+---
+title: "Top rented movies"
+description: "An overview of the movies with the highest number of rentals from the Sakila database"
+---
+
+# Top rented movies Statistics
+
+Below, we calculate and visualize the movies with the highest number of rentals from the Sakila database.
+
 ```sql top_rented_movies
     SELECT 
         f.title,
@@ -99,6 +258,22 @@ FROM film
     ORDER BY rental_count DESC;
     LIMIT 10
 ```
+
+<BarChart
+    data={ top_rented_movies}
+    title="Top rented movies"
+    x=title
+    y=rental_count
+/>
+
+---
+title: "Revenue per film category"
+description: "An overview of movie categories and their respective revenues from the Sakila database"
+---
+
+# Revenue per film category Statistics
+
+Below, we calculate and visualize  movie categories and their respective revenues from the Sakila database.
 
 ```sql revenue_per_category
     SELECT
@@ -121,6 +296,15 @@ FROM film
     x=category
     y=total_revenue
 />
+
+---
+title: "Top customer by spend"
+description: "An overview of top customers based on their total expenditure from the Sakila database"
+---
+
+# Top customer by spend Statistics
+
+Below, we calculate and visualize top customers based on their total expenditure from the Sakila database.
 
 ```sql top_cust_total_spend
     SELECT 
