@@ -53,7 +53,7 @@ Below, we visualize the  movies with the word "love" from the Sakila database.
         rating,
         length,
         description
-    WHERE lower(title) LIKE '%love%'
+    WHERE regexp_matches(lower(title), '\\blove\\b')
     ORDER BY title;
 ```
 
