@@ -34,6 +34,7 @@ Below, we calculate and visualize the movies length greater than 180  from the S
     title="Long movies"
     x= title
     y=length
+    swapXY = true
 />
 
 
@@ -199,6 +200,7 @@ Below, we calculate and visualize the movies with the highest replace cost from 
     title="Highest replace cost"
     x=title
     y=replacement_cost
+    swapXY = true
 />
 
 
@@ -289,6 +291,7 @@ Below, we calculate and visualize  movie categories and their respective revenue
     title="Revenue per film category"
     x=category
     y=total_revenue
+    swapXY = true
 />
 
 ---
