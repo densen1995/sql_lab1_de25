@@ -1,8 +1,8 @@
 ---
-title: Welcome to sakila database
+title: Welcome to sakila database(Insights from a DVD rental data)
 ---
 
-<Details title='    Queries using duckdb sakila database in evidence dashboard'>
+<Details title='    SOL Queries using duckdb sakila database in evidence dashboard'>
 
   This page can be found in your project at `/pages/sakila.md`. Make a change to the markdown file and save it to see the change take effect in your browser.
 </Details>
