@@ -57,7 +57,13 @@ Below, we visualize the  movies with the word "love" from the Sakila database.
     ORDER BY title;
 ```
 
-
+<BarChart
+    data={ love_movies}
+    title="Movies with 'love in it "
+    x=title
+    y=length
+    swapXY = true
+/>
 
 ---
 title: "Sakila Movie Length Statistics"
