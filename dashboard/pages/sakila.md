@@ -14,13 +14,13 @@ title: Welcome to sakila database(Insights from a DVD rental data)
 
 
 ---
-title: "Sakila  Long  Movies Statistics"
-description: "An overview of the Long movie from the Sakila database"
+Title: "Sakila  Long  Movies Statistics"
+Description: "An overview of the Long movie from the Sakila database"
 ---
 
 # Long Movies Statistics
 
-Below, we calculate and visualize the movies length greater than 180  from the Sakila database
+Below, we calculate and visualize the movies length greater than 180 minutes  from the Sakila database
 
 ```sql long_movies
     FROM film
@@ -39,8 +39,8 @@ Below, we calculate and visualize the movies length greater than 180  from the S
 
 
 ---
-title: "Sakila Love Statistics"
-description: "An overview of the love movie from the Sakila database"
+Title: "Sakila Love Statistics"
+Description: "An overview of the love movie from the Sakila database"
 ---
 
 # Movie with word "love" Statistics
@@ -66,8 +66,8 @@ Below, we visualize the  movies with the word "love" from the Sakila database.
 />
 
 ---
-title: "Sakila Movie Length Statistics"
-description: "An overview of the movie length statistics from the Sakila database"
+Title: "Sakila Movie Length Statistics"
+Description: "An overview of the movie length statistics from the Sakila database"
 ---
 
 # Movie Length Statistics
@@ -103,8 +103,8 @@ FROM film
 
 
 ---
-title: "Sakila Most expensive movies per day Statistics"
-description: "An overview of the Most expensive movies rental per day from the Sakila database"
+Title: "Sakila Most expensive movies per day Statistics"
+Description: "An overview of the Most expensive movies rental per day from the Sakila database"
 ---
 
 # Most expensive movies per day Statistics
@@ -132,8 +132,8 @@ FROM film
 
 
 ---
-title: "Sakila Top actor counts Statistics"
-description: "An overview of the  actors with the most movies from the Sakila database"
+Title: "Sakila Top actor counts Statistics"
+Description: "An overview of the  actors with the most movies from the Sakila database"
 ---
 
 # Top actor counts Statistics
@@ -159,8 +159,8 @@ Below, we calculate and visualize the actors with the most movies from the Sakil
 
 
 ---
-title: "Sakila Top renters Statistics"
-description: "An overview of the  customers with the most movie rentals from the Sakila database"
+Title: "Sakila Top renters Statistics"
+Description: "An overview of the  customers with the most movie rentals from the Sakila database"
 ---
 
 # Top renters Statistics
@@ -186,8 +186,8 @@ Below, we calculate and visualize the customers with the most movie rentals from
 
 
 ---
-title: "Highest replace cost"
-description: "An overview of the movies with the highest replace cost from the Sakila database"
+Title: "Highest replace cost"
+Description: "An overview of the movies with the highest replace cost from the Sakila database"
 ---
 
 # Highest replace cost Statistics
@@ -212,8 +212,8 @@ Below, we calculate and visualize the movies with the highest replace cost from 
 
 
 ---
-title: "Most country customers"
-description: "An overview of the countries with the most customers from the Sakila database"
+Title: "Most country customers"
+Description: "An overview of the countries with the most customers from the Sakila database"
 ---
 
 # Most country customers Statistics
@@ -241,8 +241,8 @@ Below, we calculate and visualiz the countries with the most customers from the 
 />
 
 ---
-title: "Top rented movies"
-description: "An overview of the movies with the highest number of rentals from the Sakila database"
+Title: "Top rented movies"
+Description: "An overview of the movies with the highest number of rentals from the Sakila database"
 ---
 
 # Top rented movies Statistics
@@ -269,8 +269,8 @@ Below, we calculate and visualize the movies with the highest number of rentals 
 />
 
 ---
-title: "Revenue per film category"
-description: "An overview of movie categories and their respective revenues from the Sakila database"
+Title: "Revenue per film category"
+Description: "An overview of movie categories and their respective revenues from the Sakila database"
 ---
 
 # Revenue per film category Statistics
@@ -301,8 +301,8 @@ Below, we calculate and visualize  movie categories and their respective revenue
 />
 
 ---
-title: "Top customer by spend"
-description: "An overview of top customers based on their total expenditure from the Sakila database"
+Title: "Top customer by spend"
+Description: "An overview of top customers based on their total expenditure from the Sakila database"
 ---
 
 # Top customer by spend Statistics
