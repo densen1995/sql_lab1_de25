@@ -40,11 +40,10 @@
 - Use pandas df to get some decsription or insight of the database for further exploration 
 
 - 
-with duckdb.connect("data/sakila.duckdb") as conn:
+    with duckdb.connect("data/sakila.duckdb") as conn:
+        description = conn.sql("DESC;").df()
 
-    description = conn.sql("DESC;").df()
-
-description #description of the sakila database after connection to duckdb"""
+    description #description of the sakila database after connection to duckdb
 
 
 **Setup Node.js using nvm (Windows)**
