@@ -1,4 +1,5 @@
 # sql_lab1_de25
+
 **SQL -> DuckDB -> Evidence Dashboard Project**
 - Sql lab on querying  a database using SQL in duckdb from database source: Sakila database(DVD rental database) using  EDA(Exploiratory Data Analysis) ,Pandas and matplotlib for graphical representations.
 - Also creating an evidence dashboard for visualisation of the data from the sakila database.
@@ -112,3 +113,6 @@ Below, we calculate and visualize the movies length greater than 180 minutes  fr
 
 **Finally the evidence dashboard appears in your local host which shows the BI Report of the database based on requirements**
 **Note: The evidence dashboard updates automatically when changes are made in the queries in pages/sakila.md**
+=======
+Sql lab on different queries using duckdb from Sakila database(DVD rental database) using  EDA in python and matplotlib for plotting and graphical representations.
+Also making a BI report using an evidence dashboard for visualisation of the queries from the sakila database.
